@@ -1,7 +1,7 @@
 # human_heart_mapping
 Remapping Data from the following papers
 
-[Cells of the adult human heart](https://www.nature.com/articles/s41586-020-2797-4)
+# [Cells of the adult human heart](https://www.nature.com/articles/s41586-020-2797-4)
 
 Downloaded from here:
 - [ERP123138](https://www.ebi.ac.uk/ena/browser/view/PRJEB39602)
