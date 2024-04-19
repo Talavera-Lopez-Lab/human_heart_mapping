@@ -1,1 +1,1 @@
-![Figure](https://github.com/Talavera-Lopez-Lab/human_heart_mapping/tree/mapping/0-raw_data_processing/0-240409-E-MTAB-12916/0-240409-kallisto_bustools/figure_1.png)
+![Figure](figure_1.png)
