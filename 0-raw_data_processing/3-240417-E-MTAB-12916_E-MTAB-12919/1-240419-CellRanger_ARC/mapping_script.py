@@ -11,6 +11,16 @@ parent_dir = '/mnt/LaCIE/ceger/Projects/human_heart_mapping/human_heart_mapping/
 cellranger_dir = '/home/ceger/CellRanger/cellranger-arc-2.0.2/cellranger-arc'
 cellranger_reference = 'cr_arc_index/GRCh38'
 mapping_output = 'mapping_py'
+mapped_samples = [
+    'HCAHeart9845431_HCAHeart9917173',
+    'HCAHeart9845432_HCAHeart9917174',
+    'HCAHeart9508627_HCAHeart9508819',
+    'HCAHeart9845434_HCAHeart9917176',
+    'HCAHeart9845435_HCAHeart9917177',
+    'HCAHeart9845433_HCAHeart9917175',
+    'HCAHeart9508628_HCAHeart9508820',
+    'HCAHeart9508629_HCAHeart9508821'
+]
 
 multiome_experiment = Multiome_ATAC_Experiment(
     rna_meta_path,
@@ -23,6 +33,7 @@ multiome_experiment = Multiome_ATAC_Experiment(
     cellranger_dir,
     cellranger_reference,
     mapping_output,
+    mapped_samples
 )
 
 
