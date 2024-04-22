@@ -33,8 +33,7 @@ multiome_experiment = Multiome_ATAC_Experiment(
     cellranger_dir,
     cellranger_reference,
     mapping_output,
-    mapped_samples
+    mapped_samples=mapped_samples
 )
-
 
 multiome_experiment.mapping()

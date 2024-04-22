@@ -18,8 +18,8 @@ class Multiome_ATAC_Experiment():
         cellranger_dir,
         cellranger_reference,
         mapping_output,
-        keys=['rna', 'atac'],
         mapped_samples=[],
+        keys=['rna', 'atac'],
     ):
         super().__init__()
         self.parent_dir = parent_dir
@@ -35,9 +35,9 @@ class Multiome_ATAC_Experiment():
         self.cellranger_dir = cellranger_dir
         self.cellranger_reference = os.path.join(self.data_dir, cellranger_reference)
         self.mapping_output = os.path.join(self.data_dir, mapping_output)
+        self.mapped_samples = mapped_samples
         self.meta_data = self.create_meta_data()
         self.runs = self.meta_data.index.unique()
-        self.mapped_samples = mapped_samples
 
     def create_meta_data(self):
         meta_data = pd.concat(
