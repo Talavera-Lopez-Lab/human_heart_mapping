@@ -87,10 +87,16 @@ class Multiome_ATAC_Experiment():
                 '--id=' + run,
                 '--reference=' + self.cellranger_reference,
                 '--libraries=' + libraries_filepath,
-                '--localcores=20',
-                '--localmem=32'
+                '--localcores=32',
+                '--localmem=128'
             ]
             subprocess.run(cellranger_arc_run)
+
+            for file in os.listdir(run):
+                if file.endswith('.bam'):
+                    bam_path = os.path.join(run, file)
+                    os.remove(bam_path)
+
             for key in self.keys:
                 sample = download_df[key][self.sample_col][0]
                 sample_dir = os.path.join(run_dir, sample)
@@ -99,3 +105,5 @@ class Multiome_ATAC_Experiment():
                     print(f'{key} sample folder deleted')
                 except OSError as e:
                     print(f"Error: {sample_dir} : {e.strerror}")
+
+            shutil.move(run, run_dir)
